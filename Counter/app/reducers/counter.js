@@ -3,7 +3,7 @@ import * as types from '../actions/actionTypes';
 const initialState = {
   count: 0
 };
-
+//ES6默认语法值
 export default function counter(state = initialState, action = {}) {
   switch (action.type) {
     case types.INCREMENT:
@@ -12,11 +12,10 @@ export default function counter(state = initialState, action = {}) {
         count: state.count + 1
       };
     case types.DECREMENT:
-      return {
-        ...state,
+      return Object.assign({}, state, {
         count: state.count - 1
-      };
+      });
     default:
-      return state;
+      return state;  //处理未知action
   }
 }

@@ -26,8 +26,9 @@ class CounterApp extends Component {
 
 export default connect(state => ({
     state: state.counter
+    
   }),
   (dispatch) => ({
-    actions: bindActionCreators(counterActions, dispatch)
+    actions: bindActionCreators(counterActions, dispatch) //把action创建函数绑定到dispatch()方法上
   })
 )(CounterApp);

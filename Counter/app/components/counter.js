@@ -38,4 +38,10 @@ export default class Counter extends Component {
       </View>
     );
   }
+
+  componentWillReceiveProps(){
+
+  }
+
+  
 }
